@@ -1,0 +1,47 @@
+table {
+    width: 100%;
+  }
+  
+  th {
+    border: 1px solid;
+  }
+  
+#Stock-Table{
+  background-color: aliceblue;
+  color:darkblue;
+}
+
+  .table-header {
+    background-color: gray; /* Class selector - background color for "table-header" */
+  }
+
+  tr:nth-child(3) td:nth-child(2){
+    color:violet;
+  }
+  
+  .highlighted {
+    background-color: lightblue; /* Class selector - background color for "highlighted" */
+  }
+
+  
+  [data-stock] {
+    font-weight: bold; /* Attribute selector (presence) - bold font for elements with data-stock attribute */
+    font-style: italic;
+  }
+  
+  [data-stock="low-stock"] {
+    color: orange; /* Attribute selector (value) - orange color for "data-stock=low-stock" */
+  }
+
+  [data-stock="in-stock"] {
+    color: green; /* Attribute selector (value) - orange color for "data-stock=low-stock" */
+  }
+
+  [data-stock="out-of-stock"] {
+    color: red; /* Attribute selector (value) - orange color for "data-stock=low-stock" */
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: yellow; /* Structural pseudo class (nth-child) - background color for even rows */
+  }
+  

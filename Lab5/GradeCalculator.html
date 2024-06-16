@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Grade Calculator</title>
+  <script>
+    function calculateAverage() {
+      var sum = 0;
+      var count = 0;
+
+      // Prompt the user for five grades
+      for (var i = 0; i < 5; i++) {
+        var input = prompt("Enter grade " + (i + 1) + ":");
+        var grade = parseFloat(input);
+
+        // Check if the input is a valid number
+        if (!isNaN(grade)) {
+          sum += grade;
+          count++;
+        }
+      }
+
+      // Calculate the average grade
+      var average = sum / count;
+
+      // Determine the letter grade based on the average
+      var letterGrade;
+      if (average >= 90) {
+        letterGrade = "A";
+      } else if (average >= 80) {
+        letterGrade = "B";
+      } else if (average >= 70) {
+        letterGrade = "C";
+      } else if (average >= 60) {
+        letterGrade = "D";
+      } else {
+        letterGrade = "F";
+      }
+
+      // Display the result
+      alert("Average Grade: " + average.toFixed(2) + " - Letter Grade: " + letterGrade);
+    }
+  </script>
+</head>
+<body>
+  <button onclick="calculateAverage()">Calculate Average Grade</button>
+</body>
+</html>

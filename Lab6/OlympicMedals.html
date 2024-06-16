@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Olympics 2021 - Medal Count</title>
+    <link rel="stylesheet" href="site.css">
+</head>
+
+<body>
+    <div class="container">
+        <section>
+            <img src="Logo.png" width="100px">
+            <h1>Olympics 2021 - Medal Count</h1>
+            <p>The Tokyo olympics was delayed from 2020 to 2021 due to Covid-19, {from data} ranked first for winning the most Gold Medals ({from data}) while {from data} ranked second with {from data} Gold Medals, and {from data} third with {from data} Gold Medals</p>
+
+        </section>
+        
+        <section>
+            <h2>Top 10 Countries</h2>
+            <table id="topCountriesTable">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Country</th>
+                        <th>Gold</th>
+                        <th>Silver</th>
+                        <th>Bronze</th>
+                        <th>Total Medals</th>
+                    </tr>
+                </thead>
+                <tbody id="topCountriesTableBody">
+                    <!-- Table rows will be dynamically populated here -->
+                </tbody>
+            </table>
+        </section>
+
+
+        <section>
+            <h2>Rest Countries</h2>
+            <table id="otherCountriesTable">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Country</th>
+                        <th>Gold</th>
+                        <th>Silver</th>
+                        <th>Bronze</th>
+                        <th>Total Medals</th>
+                    </tr>
+                </thead>
+                <tbody id="otherCountriesTableBody">
+                    <!-- Table rows will be dynamically populated here -->
+                </tbody>
+            </table>
+        </section>
+
+
+    </div>
+
+    <script src="Medals.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+  <h1>Edit Book</h1>
+  <form method="POST" action="/Books/Edit/{{book.id}}">
+    <div class="form-group">
+      <label for="title">Title:</label>
+      <input type="text" class="form-control" id="title" value="{{book.title}}" name="title" required>
+    </div>
+    <div class="form-group">
+      <label for="author">Author:</label>
+      <input type="text" class="form-control" id="author" value="{{book.author}}" name="author" required>
+    </div>
+    <div class="form-group">
+      <label for="genre">Genre:</label>
+      <input type="text" class="form-control" id="genre" value="{{book.genre}}" name="genre" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a href="{{ url_for('index') }}" class="btn btn-secondary">Cancel</a>
+  </form>
+</div>
+</body>
+</html>

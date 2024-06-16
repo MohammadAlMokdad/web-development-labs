@@ -1,0 +1,125 @@
+html{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #1B1A55;
+}
+body{
+    height: 100vh;
+    padding:0px;
+    margin:0px;
+}
+
+.container{
+
+    margin-left:auto;
+    margin-right:auto;
+    width:70%;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+
+    grid-template-areas: 
+    'header header header header header header header header header header'
+    'header header header header header header header header header header'
+    'main main main main main main main main sidebar sidebar'
+    'main main main main main main main main sidebar sidebar'
+    'main main main main main main main main sidebar sidebar'
+    'main main main main main main main main sidebar sidebar'
+    'footer footer footer footer footer footer footer footer footer footer'
+    ;
+    border:5px solid #5c0808;
+}
+
+header{
+    grid-area:header;
+    border-bottom: 5px solid #5c0808;
+}
+
+aside{
+    grid-area:sidebar;
+    background-color: #5c0808;
+    color:white;
+}
+
+aside > ul{
+    text-align: center;
+    padding:10px;
+    list-style: none;
+}
+
+aside > ul > li{
+    margin-top:15px;
+    margin-bottom:15px;
+}
+
+footer{
+    grid-area:footer;
+    color:white;
+    text-align:center;
+}
+
+main{
+    padding:10%;
+    grid-area: main;
+}
+
+#profile{
+width:200px;
+height:200px;
+grid-area: 2 / 2 / 4 / 4;
+z-index: 1;
+border: 5px solid #5c0808;
+border-radius: 50%;
+}
+
+header > h1{
+    margin-left: 20px;
+    font-size: 3rem;
+    text-align: center;
+}
+
+header > h3{
+    margin-left: 20px;
+    font-size:2rem;
+    text-align: center;
+}
+@media screen and (max-width:1300px) {
+    .container{width: 90%;}
+    header > h3, header > h1{
+        text-align: right;
+        margin-right:20px;
+    }
+}
+    
+
+@media screen and (max-width : 1000px){
+    .container{
+        width: 95%;
+        grid-template-areas: 
+        'header header header header header header header header header header'
+        'header header header header header header header header header header'
+        'header header header header header header header header header header'
+        'sidebar sidebar sidebar sidebar sidebar sidebar sidebar sidebar sidebar sidebar'
+        'main main main main main main main main main main'
+        'main main main main main main main main main main'
+        'footer footer footer footer footer footer footer footer footer footer'
+        ;
+    }
+
+    #profile{
+        width:150px;
+        height:150px;
+        grid-area: 2 / 8 / 5 / 10;
+        z-index: 1;
+        border: 5px solid #070F2B;
+        border-radius: 50%;
+        }
+    header > h1{
+        
+ text-align: left;
+    }
+
+    header > h3{
+        text-align: left;
+        font-size: 1rem;
+    }
+
+}
